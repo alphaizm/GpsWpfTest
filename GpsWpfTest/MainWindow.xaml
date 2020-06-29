@@ -1,0 +1,45 @@
+﻿<Window x:Class="GpsWpfTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GpsWpfTest"
+        mc:Ignorable="d"
+        Title="トラクター向けGPS軌跡ログ" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>           <!--【マップ用】地図拡縮スライダー-->
+            <RowDefinition Height="*"/>              <!--【マップ用】地図回転スライダー-->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--#region 地図拡縮-->
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   Margin="5 5 0 0"
+                   Text="地図拡縮"
+                   />
+
+        <Slider Grid.Row="0" Grid.Column="1"
+                x:Name="xamlSlider_Zoom"
+                Margin="0 5 0 0"
+                TickPlacement="BottomRight"
+                Minimum="1"
+                Maximum="20"
+                Value="18"
+                IsSnapToTickEnabled="True"
+                LargeChange="5"
+                />
+
+        <TextBlock Grid.Row="0" Grid.Column="2"
+                   Margin="0 5 0 0"
+                   Text="{Binding ElementName=xamlSlider_Zoom, Path=Value,Mode=TwoWay}"
+                   />
+        <!--#endregion 地図拡縮-->
+
+    </Grid>
+</Window>
