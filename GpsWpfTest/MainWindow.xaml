@@ -39,7 +39,7 @@
 
         <TextBlock Grid.Row="0" Grid.Column="2"
                    Margin="5 5 0 0"
-                   Text="{Binding ElementName=xamlSlider_Zoom, Path=Value,Mode=TwoWay}"
+                   Text="{Binding ElementName=xamlSlider_Zoom, Path=Value}"
                    />
         <!--#endregion 地図拡縮スライダー-->
 
@@ -60,14 +60,16 @@
                 LargeChange="20"
                 />
 
-        <TextBlock Grid.Row="2" Grid.Column="2"
+        <TextBlock Grid.Row="1" Grid.Column="2"
                    Margin="5 5 0 0"
-                   Text="{Binding ElementName=xamlSlider_Head, Path=Value,Mode=TwoWay}"
+                   Text="{Binding ElementName=xamlSlider_Head, Path=Value}"
                    />
         <!--#endregion 地図拡縮スライダー-->
 
         <m:Map Grid.Row="2" Grid.Column="0"
-               Grid.ColumnSpan="3"/>
+               Grid.ColumnSpan="3"
+
+               />
 
     </Grid>
 </Window>
