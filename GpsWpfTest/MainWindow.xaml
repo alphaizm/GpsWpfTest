@@ -6,7 +6,7 @@
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns:local="clr-namespace:GpsWpfTest"
         mc:Ignorable="d"
-        Title="トラクター向けGPS軌跡ログ" Height="450" Width="800">
+        Title="トラクター向けGPS軌跡ログ" Height="1000" Width="1500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>           <!--【マップ用】地図拡縮スライダー-->
