@@ -64,11 +64,12 @@
                    Margin="5 5 0 0"
                    Text="{Binding ElementName=xamlSlider_Head, Path=Value}"
                    />
-        <!--#endregion 地図拡縮スライダー-->
+        <!--#endregion 地図回転スライダー-->
 
         <m:Map Grid.Row="2" Grid.Column="0"
                Grid.ColumnSpan="3"
-
+               ZoomLevel="{Binding ElementName=xamlSlider_Zoom, Path=Value, Mode=TwoWay}"
+               Heading="{Binding ElementName=xamlSlider_Head, Path=Value, Mode=TwoWay}"
                />
 
     </Grid>
