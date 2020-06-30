@@ -3,13 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns:local="clr-namespace:GpsWpfTest"
         mc:Ignorable="d"
         Title="トラクター向けGPS軌跡ログ" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>           <!--【マップ用】地図拡縮スライダー-->
-            <RowDefinition Height="*"/>              <!--【マップ用】地図回転スライダー-->
+            <RowDefinition Height="auto"/>           <!--【マップ用】地図回転スライダー-->
+            <RowDefinition Height="*"/>              <!--【マップ】-->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -18,7 +20,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!--#region 地図拡縮-->
+        <!--#region 地図拡縮スライダー-->
         <TextBlock Grid.Row="0" Grid.Column="0"
                    Margin="5 5 0 0"
                    Text="地図拡縮"
@@ -39,9 +41,9 @@
                    Margin="5 5 0 0"
                    Text="{Binding ElementName=xamlSlider_Zoom, Path=Value,Mode=TwoWay}"
                    />
-        <!--#endregion 地図拡縮-->
+        <!--#endregion 地図拡縮スライダー-->
 
-        <!--#region 地図回転-->
+        <!--#region 地図回転スライダー-->
         <TextBlock Grid.Row="1" Grid.Column="0"
                    Margin="5 5 0 0"
                    Text="地図回転"
@@ -62,7 +64,10 @@
                    Margin="5 5 0 0"
                    Text="{Binding ElementName=xamlSlider_Head, Path=Value,Mode=TwoWay}"
                    />
-        <!--#endregion 地図拡縮-->
+        <!--#endregion 地図拡縮スライダー-->
+
+        <m:Map Grid.Row="2" Grid.Column="0"
+               Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>
