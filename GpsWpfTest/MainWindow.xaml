@@ -71,6 +71,7 @@
                ZoomLevel="{Binding ElementName=xamlSlider_Zoom, Path=Value, Mode=TwoWay}"
                Heading="{Binding ElementName=xamlSlider_Head, Path=Value, Mode=TwoWay}"
                Center="36.397668, 136.518854"
+               Mode="AerialWithLabels"
                />
 
     </Grid>
