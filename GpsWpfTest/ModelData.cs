@@ -9,5 +9,6 @@ namespace GpsWpfTest
 {
     class ModelData
     {
+        public Location _location;
     }
 }
