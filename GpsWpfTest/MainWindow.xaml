@@ -74,6 +74,7 @@
 
         <m:Map Grid.Row="2" Grid.Column="0"
                Grid.ColumnSpan="4"
+               x:Name="xamlMap_Gps"
                ZoomLevel="{Binding ElementName=xamlSlider_Zoom, Path=Value, Mode=TwoWay}"
                Heading="{Binding ElementName=xamlSlider_Head, Path=Value, Mode=TwoWay}"
                Center="36.397668, 136.518854"
