@@ -24,10 +24,5 @@ namespace GpsWpfTest
         {
             InitializeComponent();
         }
-
-        private void EvtTggBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
