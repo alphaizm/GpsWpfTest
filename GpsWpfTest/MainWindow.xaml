@@ -72,14 +72,30 @@
                   Content="デバッグ"
                   />
 
+
         <m:Map Grid.Row="2" Grid.Column="0"
                Grid.ColumnSpan="4"
                x:Name="xamlMap_Gps"
                ZoomLevel="{Binding ElementName=xamlSlider_Zoom, Path=Value, Mode=TwoWay}"
                Heading="{Binding ElementName=xamlSlider_Head, Path=Value, Mode=TwoWay}"
-               Center="36.397668, 136.518854"
+               Center="{Binding MapLocation, Mode=TwoWay}"
                Mode="AerialWithLabels"
                />
+
+
+        <TextBlock Grid.Row="2" Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   FontSize="20"
+                   Foreground="Yellow"
+                   Text="{Binding ElementName=xamlMap_Gps, Path=Center}"
+                   />
+        <TextBlock Grid.Row="2" Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   FontSize="20"
+                   Margin="0 20 0 0"
+                   Foreground="YellowGreen"
+                   Text="{Binding DBG_MAP_CENTER}"
+                   />
 
     </Grid>
 </Window>

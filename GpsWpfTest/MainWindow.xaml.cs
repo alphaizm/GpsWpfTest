@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GpsWpfTest.ViewModels;
 
 namespace GpsWpfTest
 {
@@ -20,9 +21,14 @@ namespace GpsWpfTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModelData _vm_data;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            _vm_data = new ViewModelData();
+            this.DataContext = _vm_data;
         }
     }
 }
